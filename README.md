@@ -69,9 +69,9 @@ nano arquivo_teste.txt
 
 Exemplos:
 ```bash
-chmod 700 pasta_teste                      # Apenas o dono acessa
-chmod 711 pasta_teste                      # Outros podem ver a pasta, não acessar arquivos
-chmod 600 pasta_teste/arquivo_teste.txt    # Somente o dono pode ler/escrever
+chmod 600 arquivo_teste.txt                  # Apenas o dono lê e edita
+chmod 644 arquivo_teste.txt                  # Outros podem ler o arquivo, não editá-lo
+chmod 666 arquivo_teste.txt                  # Todos podem ler e editar o arquivo
 ```
 
 ---
@@ -219,13 +219,6 @@ ssh -L 8080:localhost:1234 aluno@192.168.10.20 -p 2222
 | Rodar servidor | `python3 -m http.server 1234` |
 | Conectar SSH | `ssh usuario@ip` |
 | Ver IPs | `ip -br -c a` |
-
----
-
-## 🔗 Links úteis
-
-- [Site Oficial Debian](https://www.debian.org/index.pt.html)
-- [Guia CP1 Notion](https://www.notion.so/CP1-1b8933153f90806b8e11dd9f8c9adf84?pvs=21)
 
 ---
 
