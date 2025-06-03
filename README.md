@@ -215,7 +215,7 @@ chmod -v 600 authorized_keys
 ```
 Copiar chave pública do cliente para o server:
 ```bash
-ssh-copy-id aluno@192.168.10.30
+ssh-copy-id aluno@192.168.10.20
 ```
 
 
@@ -226,7 +226,7 @@ ssh -L 8080:localhost:1234 aluno@192.168.10.20 -p 2222
 
 ## Bruteforce com Hydra
 ```bash
-hydra -l aluno -P /usr/share/wordlists/rockyou.txt ssh://192.168.15.2
+hydra -l aluno -P /usr/share/wordlists/rockyou.txt ssh://192.168.10.20
 ```
 Explicação dos parâmetros:
 
