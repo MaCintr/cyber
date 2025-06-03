@@ -208,6 +208,11 @@ ls
 cat id_rsa
 cat id_rsa.pub
 ```
+Mudar permissão de usuário:
+```bash
+cd /home/aluno/.ssh
+chmod -v 600 authorized_keys
+```
 Copiar chave pública do cliente para o server:
 ```bash
 ssh-copy-id aluno@192.168.10.30
