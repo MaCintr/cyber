@@ -208,6 +208,10 @@ ls
 cat id_rsa
 cat id_rsa.pub
 ```
+Copiar chave pública do cliente para o server:
+```bash
+ssh-copy-id aluno@192.168.10.30
+```
 
 
 ### Redirecionamento de porta (túnel):
