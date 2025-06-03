@@ -141,7 +141,7 @@ userdel -r nome
 
 ---
 
-## 🧪 Testes com cURL
+## 🧪 Testes com CURL
 
 1. Ver conteúdo:
    ```bash
@@ -199,11 +199,33 @@ service ssh restart
 ssh aluno@<ip-da-maquina>
 ssh aluno@<ip-da-maquina> -p <porta>
 ```
+### Autenticação com Chave
+### Gerar chave pública (sem senha) e privada
+Utilize o usuário que terá acesso a máquina remota
+```bash
+-t rsa
+ls
+cat id_rsa
+cat id_rsa.pub
+```
+
 
 ### Redirecionamento de porta (túnel):
 ```bash
 ssh -L 8080:localhost:1234 aluno@192.168.10.20 -p 2222
 ```
+
+## Bruteforce com Hydra
+```bash
+hydra -l aluno -P /usr/share/wordlists/rockyou.txt ssh://192.168.15.2
+```
+Explicação dos parâmetros:
+
+-l aluno → usuário a ser testado.
+
+-P /usr/share/wordlists/rockyou.txt → lista de senhas para testar.
+
+ssh://192.168.15.2 → IP ou hostname do alvo com serviço SSH.
 
 ---
 
