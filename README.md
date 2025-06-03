@@ -203,7 +203,7 @@ ssh aluno@<ip-da-maquina> -p <porta>
 ### Gerar chave pública (sem senha) e privada
 Utilize o usuário que terá acesso a máquina remota
 ```bash
--t rsa
+ssh-keygen -t rsa
 ls
 cat id_rsa
 cat id_rsa.pub
