@@ -1,5 +1,5 @@
 
-# 🛡️ Cyber Security - Guia Prático de Configuração e Testes (Debian Linux)
+# 🛡️ Cyber Security - Guia Prático de Configuração e Testes
 
 Este guia contém instruções práticas para configuração de rede, permissões de arquivos, servidor web, e testes com cURL e SSH em ambiente Linux Debian. Ideal para laboratórios e ambientes de estudo.
 
