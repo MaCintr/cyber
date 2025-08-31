@@ -238,6 +238,66 @@ ssh://192.168.15.2 → IP ou hostname do alvo com serviço SSH.
 
 ---
 
+# Guia de Testes de Segurança no bWAPP com BurpSuite
+
+## 1. Descobrir o IP da máquina alvo
+Execute o comando abaixo para listar os dispositivos conectados à rede:
+
+```bash
+netdiscover -i eth0 -P -r 192.168.56.0/24
+```
+O comando retornará os IPs ligados.
+
+Coloque o IP alvo descoberto no navegador.
+
+2. Acessar o bWAPP
+No navegador, insira o IP identificado.
+
+Acesse a aplicação bWAPP.
+
+3. Configurar o BurpSuite
+
+Caso o foxyproxy não estiver configurado, segue uma imagem com a configuração:
+<img width="1027" height="643" alt="image" src="https://github.com/user-attachments/assets/cac41db3-2e93-4ac5-8821-127505a063c5" />
+
+Abra o BurpSuite.
+
+Desligue e ligue novamente a extensão antes de começar.
+
+Faça login no bWAPP.
+
+As credenciais utilizadas aparecerão interceptadas no BurpSuite.
+
+4. Ataque de Força Bruta (Intruder)
+O Intruder não é barrado no bWAPP, então usaremos ele para o ataque.
+
+No BurpSuite, vá em Intruder.
+
+Clique em Clear e depois em Add.
+
+Clique em Start Attack.
+
+No Checkpoint, suba o arquivo de wordlist.
+
+Inicie o ataque.
+
+<img width="1052" height="653" alt="image" src="https://github.com/user-attachments/assets/f8afe3b1-3786-4453-9942-24519dcca12d" />
+
+Credenciais padrão
+Login: bee
+
+Senha: bug
+
+### Arquivos a serem utilizados para descobrir login e senha:
+
+```bash
+cd /usr/share/wordlists/metasploit/http_default_pass.txt
+// senhas
+
+cd /usr/share/wordlists/metasploit/http_default_users.txt
+// users
+```
+
 ## 📄 Resumo de Comandos
 
 | Tarefa | Comando |
